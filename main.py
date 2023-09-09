@@ -81,4 +81,9 @@ if __name__ == '__main__':
                        "Plaintext plus ciphertext": plaintext_plus_ciphertext.tolist(),
                        "Ciphertext_minus_plaintext": ciphertext_minus_plaintext.tolist()
                        })
-    df.to_csv("cribbing_list.csv", header=True, index=False, sep=';')
+    df.to_csv("cribbing_list_full.csv", header=True, index=False, sep=';')
+
+    df_1 = df[0:3500]
+    df_2 = df[3501::]
+    df_1.to_csv("cribbing_list_part1.tsv", header=True, index=False, sep="\t")
+    df_2.to_csv("cribbing_list_part2.tsv", header=True, index=False, sep="\t")
