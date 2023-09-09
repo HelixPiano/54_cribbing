@@ -59,7 +59,8 @@ if __name__ == '__main__':
     vowels = ("a", "e", "i", "o", "u")
     all_nouns = [word for synset in wn.all_synsets('n') for word in synset.lemma_names()]
     just_letters = [word for word in all_nouns if re.match("[a-zA-Z]*$", word)]
-    consonant_start = [word for word in just_letters if not word.lower().startswith(vowels)]
+    unique_words = list(set(just_letters))
+    consonant_start = [word for word in unique_words if not word.lower().startswith(vowels)]
     in_indices = list(map(convert_english_text, consonant_start))
     length_8_words = [word for word, indices in zip(consonant_start, in_indices) if len(indices) == 8]
     length_8_indices = [indices for indices in in_indices if len(indices) == 8]
