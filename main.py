@@ -81,5 +81,3 @@ if __name__ == '__main__':
                        "Ciphertext_minus_plaintext": ciphertext_minus_plaintext.tolist()
                        })
     df.to_csv("cribbing_list.csv", header=True, index=False, sep=';')
-
-# TODO: Pip requirements
