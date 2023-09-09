@@ -6,4 +6,4 @@ The following assumptions were made:
 4. The second word is singular.
 
 The list of cribs is based on the wordnet2022 list from NLTK.
-I do not take any responsibility for completness of the list or correctness of the underlying code.
+I do not take any responsibility for completeness of the list or correctness of the underlying code.
